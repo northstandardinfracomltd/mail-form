@@ -1596,7 +1596,7 @@ img.navlogo {
   font-size: 19px;
   padding-left: 24px;
   padding-right: 24px;
-
+width: 100% !important;
   padding-top: 15px;
 
   padding-bottom: 14px;
@@ -1805,17 +1805,7 @@ input[type="text" i]:focus {
 }
 
 
-.uniplasse:hover {
-   box-shadow: 0 0 0px 4px #008eff38;
-    border-radius: 9px;
 
-}
-
-
-.uniplasse {
-    border-radius: 9px;
-
-}
 
 .input-fieldfix1:hover {
   box-shadow: 0 0 0px 4px #008eff38;
@@ -2654,7 +2644,7 @@ input[type="radio"]:checked + label {
 
 
 .justriding {
-  background-color: blue;
+  background-color: #06f;
   color: white;
   border: none;
   border-radius: 9px 9px 0px 0px;
@@ -2664,47 +2654,78 @@ input[type="radio"]:checked + label {
   padding-right: 24px;
   width: 100% !important;
   padding-top: 15px;
-  padding-bottom: 14px;
-  font-family: "saasduoBTN" !important;
+  padding-bottom: 10px;
+  font-family: "saasduoPAR" !important;
   height: 53px;
   white-space: nowrap;
+  cursor: default !important;
 }
 
 .justriding:hover {
-  background-color: #cf0006;
-  box-shadow: 0 0 0px 4px #008eff38;
+  background-color: #06f;
+}
+
+
+
+.uniplasse {
+    border-radius: 9px;
+      box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(188 188 188 / 4%), 0px -18px 10.9766px rgb(189 189 189 / 5%), 0px 14px 20.5812px rgb(203 203 203 / 6%), 0px 12px 41.1623px rgb(163 163 163 / 7%), -20px 0px 89.1851px rgb(255 255 255 / 9%);
+}
+
+
+.uniplasse:focus {
+    outline: none !important; 
+}
+
+.uniplasse:hover {
+   box-shadow: 0 0 0px 4px #008eff38;
+    border-radius: 9px;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none; 
+}
+
+.input-fieldfix193 {
+  width: 100%;
+  height: 54px;
+  border: 3px solid #06f;
+  border-radius: 0px 0px 9px 9px;
+  margin-right: 10px;
+  padding-top: 14px;
+  padding-bottom: 10px;
+  font-family: "saasduoPAR";
+  font-size: 19px;
+  text-align: center;
+  color: #5d5c69 !important;
 }
 
 
 
 
-
-
-
-
-
-
-.button-containerxxx2 {
+.button-group {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    width: 100%;
 }
 
+.button-group input[type="radio"] {
+    display: none;
+}
 
-black {
+.button-group label {
     cursor: pointer;
     flex-grow: 1;
     height: 54px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 20px; /* Ajout de padding à droite */
+    padding-right: 20px;
     border: 2px solid transparent;
     transition: border 0.3s;
 }
 
-input[type="radio"]:checked + black {
+.button-group input[type="radio"]:checked + label {
     border: 4px solid red;
     font-weight: bold;
 }
