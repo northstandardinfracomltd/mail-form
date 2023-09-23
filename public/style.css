@@ -1626,29 +1626,6 @@ width: 100% !important;
     z-index: 1;
 }
 
-.loader {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  
-    background: linear-gradient(90deg, #ee0007 25%, #ff4343 50%, #ee0007 75%);
-    background-size: 200% 100%;
-  
-animation: loading 2.5s linear infinite;
-}
-
-@keyframes loading {
-    0% {
-        background-position: 100% 0;
-    }
-    100% {
-        background-position: -110% 0;
-    }
-}
-
-
 
 
 
@@ -2850,3 +2827,28 @@ transform: scale(1.05);
 }
 
 
+.prime {
+  width: 100%;
+background: #ffd000; 
+  padding-right: 50px;
+    padding-left: 50px;
+  padding-bottom: 18px;
+  margin-bottom: 70px;
+border-radius: 9px;
+      box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(188 188 188 / 4%), 0px -18px 10.9766px rgb(189 189 189 / 5%), 0px 14px 20.5812px rgb(203 203 203 / 6%), 0px 12px 41.1623px rgb(163 163 163 / 7%), -20px 0px 89.1851px rgb(255 255 255 / 9%);
+}
+
+
+.blue-txt932 {
+    text-decoration: none;
+          font-family: "saasduoPAR";
+    font-size: 22px !important;
+  color: #1B1B20;
+  padding-left: 3px;
+  padding-right: 3px;
+  line-height: 30px;
+  padding-top: 50px;
+    padding-bottom: 8px;
+  line-height: 33px;
+
+}
