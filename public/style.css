@@ -2618,6 +2618,7 @@ label {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  padding-top: 3px;
     padding-right: 0px; /* Ajout de padding à droite */
     border: 1px solid #d4d4d7;
   border-radius: 9px;
@@ -2629,7 +2630,7 @@ label {
     justify-content: center;
       font-family: "saasduoPAR";
     font-size: 19px;
-  color: #5d5c69 !important;
+  color: #5d5c69;
   box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(188 188 188 / 4%), 0px -18px 10.9766px rgb(189 189 189 / 5%), 0px 14px 20.5812px rgb(203 203 203 / 6%), 0px 12px 41.1623px rgb(163 163 163 / 7%), -20px 0px 89.1851px rgb(255 255 255 / 9%);
 }
 
@@ -2643,6 +2644,7 @@ input[type="radio"]:checked + label {
     border: 1px solid #06f;
     background: #ebf3ff;
   box-shadow: 0 0 0px 4px #008eff38;
+  color: #06f;
 
 }
 
