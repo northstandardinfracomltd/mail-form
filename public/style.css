@@ -1605,12 +1605,53 @@ width: 100% !important;
   font-family: "saasduoBTN" !important;
   height: 53px;
   white-space: nowrap;
+  
+  
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
 }
 
 .red-price-button:hover {
   background-color: #cf0006;
   box-shadow: 0 0 0px 4px #008eff38;
 }
+
+
+
+
+
+.button-text {
+    position: relative;
+    z-index: 1;
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #ee0007 25%, #ff686c 50%, #ee0007 75%);
+    background-size: 200% 100%;
+    animation: loading 2s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+
+
+
+
+
+
 
 .priceimg {
   width: 250px;
