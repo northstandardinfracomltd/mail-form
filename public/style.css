@@ -1,16 +1,7 @@
-/******************************************************************************
-START Glitch hello-app default styles
-
-The styles in this section do some minimal CSS resets, set default fonts and 
-colors, and handle the layout for our footer and "Remix on Glitch" button. If
-you're new to CSS they may seem a little complicated, but you can scroll down
-to this section's matching END comment to see page-specific styles.
-******************************************************************************/
-/* Our default values set as CSS variables */
 :root {
-  --color-bg: #FFE6F8;
+  --color-bg: #69f7be;
   --color-text-main: #000000;
-  --color-primary: #D7F5EF;
+  --color-primary: #ffff00;
   --wrapper-height: 87vh;
   --image-max-width: 300px;
   --image-margin: 3rem;
@@ -18,7 +9,6 @@ to this section's matching END comment to see page-specific styles.
   --font-family-header: "HK Grotesk";
 }
 
-/* Basic page style resets */
 * {
   box-sizing: border-box;
 }
@@ -26,7 +16,6 @@ to this section's matching END comment to see page-specific styles.
   display: none !important;
 }
 
-/* Import fonts */
 @font-face {
   font-family: HK Grotesk;
   src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
@@ -39,75 +28,40 @@ to this section's matching END comment to see page-specific styles.
     format("opentype");
 }
 
-/* Our remix on glitch button */
-.btn--remix {
-  font-family: HK Grotesk;
-  padding: 0.75rem 1rem;
-  font-size: 1.1rem;
-  line-height: 1rem;
-  font-weight: 500;
-  height: 2.75rem;
-  align-items: center;
-  cursor: pointer;
-  background: #FFFFFF;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 4px;
-  text-decoration: none;
-  color: #000;
-  white-space: nowrap;
-  margin-left: auto;
-}
-.btn--remix img {
-  margin-right: 0.5rem;
-}
-.btn--remix:hover {
-  background-color: #D0FFF1;
+@font-face {
+  font-family: saasduoTXT;
+  font-weight: bold;
+  src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20Primary?v=1692806284277")
+    format("opentype");
 }
 
-/* Navigation grid */
-.footer {
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem auto 0;
-  padding: 1rem 0 0.75rem 0;
-  width: 100%;
-  flex-wrap: wrap;
-  border-top: 4px solid #fff;
+@font-face {
+  font-family: saasduoTIL;
+  font-weight: bold;
+  src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20Secondary?v=1692806478312")
+    format("opentype");
 }
 
-.footer a:not(.btn--remix):link,
-a:not(.btn--remix):visited {
-  font-family: HK Grotesk;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.1rem;
-  color: #000;
-  text-decoration: none;
-  border-style: none;
-}
-.footer a:hover {
-  background: var(--color-primary);
+@font-face {
+  font-family: saasduoPAR;
+  font-weight: bold;
+  src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20more?v=1692822723823")
+    format("opentype");
 }
 
-.footer .links {
-  padding: 0.5rem 1rem 1.5rem;
-  white-space: nowrap;
+@font-face {
+  font-family: saasduoBTN;
+  font-weight: bold;
+  src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20Button?v=1692822927520")
+    format("opentype");
 }
-
-.divider {
-  padding: 0 1rem;
-}
-/******************************************************************************
-END Glitch hello-app default styles
-******************************************************************************/
 
 body {
-  font-family: HK Grotesk;
-  background-color: var(--color-bg);
+  background: #ffffff;
+  margin: 0px !important;
+  overflow-x: hidden;
 }
 
-/* Page structure */
 .wrapper {
   min-height: var(--wrapper-height);
   display: grid;
@@ -117,98 +71,2503 @@ body {
 .content {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.saasduodesklandscapeacardinal {
+  height: 720px;
+  background-color: #ffffff;
+}
+
+.saasduodesklandscapea {
+  height: 444px;
+  background-image: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/Crabe2.png?v=1692731148369");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.saasduodesklandscapeb {
+  background: #ffd000;
+  border-radius: 200px 200px 0px 0px;
+  margin-bottom: -50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+}
+
+.saasduodesklandscapeb2 {
+  margin-top: -70px;
+  background: #1b1b20;
+  border-radius: 0px 0px 200px 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+}
+
+.illustrationcapebYELLOW {
+  width: 100%;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 55px;
+}
+
+.illustrationcapebRED {
+  width: 100%;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 55px;
+  margin-top: 55px;
+}
+
+.illustrationcapeb2 {
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.saasduodesklandscapec {
+  height: 444px;
+  background-image: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/Crabe1.png?v=1692731569533");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.grid-item {
+  border: 1px solid #d4d4d7;
+  border-radius: 9px;
+  background: #f4f4f4;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%),
+    -2px 11px 5.48831px rgb(188 188 188 / 4%),
+    0px -18px 10.9766px rgb(189 189 189 / 5%),
+    0px 14px 20.5812px rgb(203 203 203 / 6%),
+    0px 12px 41.1623px rgb(163 163 163 / 7%),
+    -20px 0px 89.1851px rgb(255 255 255 / 9%);
+}
+
+.grid-item:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 0px 4px #008eff38;
+}
+
+.saasduo9282 {
+  max-width: 1150px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.saasduo9222321222219 {
+  max-width: 1150px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.saasduo1234 {
+  max-width: 1150px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.saasduo9229 {
+  max-width: 1150px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.saasduo9222 {
+  max-width: 1150px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.saasduo9222321 {
+  max-width: 1150px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.saasduo9221 {
+  max-width: 1150px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.gratefully {
+  width: 100px;
+}
+
+.hand {
+  width: 245px;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  text-align: center !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.hand2 {
+  width: 250px;
+  margin-top: 15px;
+  margin-bottom: 23px;
+  text-align: center !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.underscore {
+  width: 100%;
+  margin-top: -20px;
+}
+
+.antrax1 {
+  width: 100%;
+  margin-bottom: -10px;
+}
+
+.antrax2 {
+  width: 100%;
+  margin-top: -10px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+.icon {
+  width: 55px;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: -1px;
+}
+
+.objet0001 {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.objet0001P {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.objet000P {
+  background-color: #22272e;
+  width: 100%;
+  max-width: 1150px;
+  border-radius: 0px 0px 9px 9px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 0px !important;
+}
+
+.objet000 {
+  background-color: #ffd000;
+  width: 100%;
+  max-width: 1150px;
+  border-radius: 9px 9px 0px 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+
+  height: 600px;
+  background-image: url(https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/curved9232032323.svg?v=1692825654132);
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.objet000 p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.txt0001 {
+  font-size: 30px;
+  font-family: "saasduoTIL" !important;
+  letter-spacing: -0.5px;
+  color: #1b1b20;
+  padding-left: 10px;
+  padding-right: 10px;
+  white-space: nowrap !important;
+  cursor: pointer;
+}
+
+.txt0001price {
+  font-size: 27px;
+  font-family: "saasduoTIL" !important;
+  letter-spacing: -0.5px;
+  color: #1b1b20;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
+.txt0002price {
+  font-size: 20px;
+  font-family: "saasduoPAR" !important;
+  line-height: 32px;
+  margin-top: -10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
+.brand {
+  width: 300px;
+}
+
+.txt0002 {
+  font-size: 22px;
+  font-family: "saasduoPAR" !important;
+  line-height: 38px;
+  margin-top: -10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #1b1b20;
+  cursor: pointer;
+}
+
+.txtb2o {
+  font-size: 22px;
+  font-family: "saasduoTIL" !important;
+  letter-spacing: 0px;
+  color: #1b1b20;
+}
+
+.txtb2osub {
+  font-size: 18px;
+  font-family: "saasduoTXT" !important;
+}
+
+.txt98765 {
+  font-size: 54px !important;
+  font-family: "saasduoTIL" !important;
+  letter-spacing: 0px;
+  color: #1b1b20;
+  letter-spacing: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center !important;
+}
+
+.txt987651A {
+  font-size: 54px !important;
+  font-family: "saasduoTIL" !important;
+  letter-spacing: -1.5px !important;
+  color: #1b1b20;
+  letter-spacing: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center !important;
+  padding-top: 30px;
+  margin-bottom: 10px;
+  cursor: default;
+}
+
+.txt987652B {
+  font-size: 54px !important;
+  font-family: "saasduoTIL" !important;
+  letter-spacing: -1.5px !important;
+  color: #ffffff;
+  letter-spacing: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center !important;
+  padding-top: 30px;
+  margin-bottom: 10px;
+  cursor: default;
+}
+
+.txt98765UU {
+  font-size: 22px !important;
+  font-family: "saasduoPAR" !important;
+  letter-spacing: 0px;
+  color: #1b1b20;
+  letter-spacing: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center !important;
+}
+
+.txt98765UU1A {
+  font-size: 22px !important;
+  font-family: "saasduoPAR" !important;
+  letter-spacing: 0px;
+  color: #1b1b20;
+  letter-spacing: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center !important;
+  max-width: 1000px;
+  line-height: 37px;
+  cursor: default;
+}
+
+.txt98765UU2B {
+  font-size: 22px !important;
+  font-family: "saasduoPAR" !important;
+  letter-spacing: 0px;
+  color: #ffffff;
+  letter-spacing: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center !important;
+  max-width: 1000px;
+  line-height: 37px;
+  cursor: default;
+}
+
+.txt00091 {
+  font-size: 32px;
+}
+
+.txt00092 {
+  font-size: 20px;
+}
+
+.txt0009 {
+  font-size: 32px;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.txt0009zapier {
+  font-size: 22px;
+  text-align: left;
+  padding-left: 0px;
+  padding-right: 5px;
+  font-family: "saasduoPAR" !important;
+  text-decoration: none;
+  color: #1b1b20;
+  white-space: nowrap;
+}
+
+.txt0009zapier:hover {
+  color: #06f;
+  text-decoration: none !important;
+}
+
+.txt0009zapiertop {
+  font-size: 28px !important;
+  text-align: left;
+  padding-left: 0px;
+  padding-right: 5px;
+  font-family: "saasduoTIL" !important;
+  text-decoration: none !important;
+  letter-spacing: -0.5px;
+  color: #1b1b20;
+  cursor: default !important;
+}
+
+.txt0003 {
+  font-size: 20px;
+}
+
+.txt0005 {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 22px;
+  font-family: "saasduoTIL" !important;
+  letter-spacing: 0px;
+  color: #1b1b20;
+}
+
+.txt00051 {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 18px;
+  font-family: "saasduoTXT" !important;
+  letter-spacing: 0px;
+  color: #1b1b20;
+}
+
+.two-column-container {
+  display: flex;
+  background: #f4f4f4;
+  border: 1px solid #d4d4d7;
+  border-radius: 9px;
+  box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%),
+    -2px 11px 5.48831px rgb(188 188 188 / 4%),
+    0px -18px 10.9766px rgb(189 189 189 / 5%),
+    0px 14px 20.5812px rgb(203 203 203 / 6%),
+    0px 12px 41.1623px rgb(163 163 163 / 7%),
+    -20px 0px 89.1851px rgb(255 255 255 / 9%);
+}
+
+.left-column {
+  flex: 70%;
+  padding: 20px;
+}
+
+.right-column {
+  flex: 30%;
+  padding: 20px;
+  justify-content: right;
+  text-align: right;
+  margin-left: auto;
+}
+
+.green-button {
+  border: 0px solid rgb(34 120 205) !important;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100%;
+
+  border-radius: 7px;
+  height: 44px;
+  color: #ffffff;
+  background: #2383e2;
+  box-shadow: inset 0 0 0 1px hsla(0, 0%, 6%, 0.1),
+    0 1px 2px hsla(0, 0%, 6%, 0.1);
+}
+
+.green-button:hover {
+  background-color: #00a82d;
+}
+
+.grid-containerccc {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid-itemccc {
+  border: 1px solid #d4d4d7;
+  border-radius: 9px;
+  background: #f4f4f4;
+  padding: 0px;
+  cursor: pointer;
+  box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%),
+    -2px 11px 5.48831px rgb(188 188 188 / 4%),
+    0px -18px 10.9766px rgb(189 189 189 / 5%),
+    0px 14px 20.5812px rgb(203 203 203 / 6%),
+    0px 12px 41.1623px rgb(163 163 163 / 7%),
+    -20px 0px 89.1851px rgb(255 255 255 / 9%);
+}
+
+.brand-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  border-bottom: 1px solid #d4d4d7;
+  height: 180px;
+  border-radius: 9px 9px 0px 0px;
+}
+
+.grid-itemccc:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 0px 4px #008eff38;
+}
+
+.brand {
+  height: 100%;
+}
+
+.tag-button {
+  background-color: #00a82d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  cursor: default;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.tag-button:hover {
+  background-color: #00a82d;
+}
+
+.ambianttri {
+  background: transparent;
+}
+
+.unescribe-button {
+  background-color: #00a82d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  cursor: default;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.unescribe-button:hover {
+  background-color: #00a82d;
+}
+
+.firm-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid-firm {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0px;
+}
+
+.firm-flat {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 9px 9px 0px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.firmm202002combin {
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.firmm202002 {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.footer-button {
+  background-color: #00a82d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0px 0px 9px 9px;
+  font-size: 16px;
+  cursor: pointer;
+  cursor: default;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+.footer-button:hover {
+  background-color: #00a82d;
+}
+
+::selection {
+  background-color: #ffd00082;
+  color: #2a2a32; /* Couleur du texte sélectionné */
+}
+
+.footer2-button {
+  background-color: #ee0007;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0px 0px 9px 9px;
+  font-size: 16px;
+  cursor: pointer;
+  cursor: default;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+.footer2-button:hover {
+  background-color: #ee0007;
+}
+
+.colorify1 {
+  background-color: #ffd000;
+}
+
+.colorify2 {
+  background-color: #016f08;
+}
+
+.up-button {
+  background-color: #00a82d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 9px 9px 0px 0px;
+  font-size: 16px;
+  cursor: pointer;
+  cursor: default;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+.up-button:hover {
+  background-color: #00a82d;
+}
+
+.alert {
+  padding: 20px 20px 20px 20px;
+  margin-bottom: 0px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1 !important;
+  font-size: 16px !important;
+  font-family: "Saoecom2font" !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0.01em !important;
+  color: #a28db6 !important;
+
+  background: #f4f4f4;
+  border: 1px solid #d4d4d7;
+
+  display: none !important;
+}
+
+.buttonalert {
+  text-decoration: none;
+  position: relative !important;
+  display: inline-block !important;
+  padding: 6px 16px !important;
+  font-size: 15px !important;
+  font-weight: var(--base-text-weight-medium, 500) !important;
+  line-height: 20px !important;
+  white-space: nowrap !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  border: 1px solid rgb(73 63 88);
+  border-radius: 6px;
+  font-family: "Saoecom2font" !important;
+  color: #c7acff !important;
+  background-color: rgb(51 45 62) !important;
+  text-align: center !important;
+}
+
+.buttonalert:hover {
+  text-decoration: none;
+  position: relative !important;
+  display: inline-block !important;
+  padding: 6px 16px !important;
+  font-size: 15px !important;
+  font-weight: var(--base-text-weight-medium, 500) !important;
+  line-height: 20px !important;
+  white-space: nowrap !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  border: 1px solid rgb(30 111 45);
+  border-radius: 6px;
+  font-family: "Saoecom2font" !important;
+  color: #fff !important;
+  background-color: #238636 !important;
+  text-align: center !important;
+}
+
+.main-nav {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0px;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  justify-content: space-between;
+  background: #008eff38;
+}
+
+img.navlogo {
+  margin-top: 8.5px;
+  margin-left: 0px !important;
+  cursor: pointer;
+}
+
+.navlogo {
+  line-height: 0px;
+  width: 130px !important;
+}
+
+.navlogo:hover {
+  transform: scale(1.05);
+  transition-duration: 0.2s;
+}
+
+.main-nav a {
+  cursor: pointer;
+  float: left;
+  list-style: none;
+  height: 0px;
+  margin-bottom: 26px !important;
+  line-height: 25px;
+  color: #acbac7 !important;
+  font-family: "Saoecom2font" !important;
+  font-size: 15px !important;
+  letter-spacing: 0.02em !important;
+}
+
+.triathlon-button {
+  white-space: nowrap;
+  background-color: #06f;
+  color: white;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 9px;
+  padding-bottom: 10px;
+  border-radius: 9px;
+  font-size: 16px;
+  cursor: pointer;
+  height: 44px;
+  margin-right: 8px;
+  font-family: "SaaSduoTXT" !important;
+}
+
+.triathlon-button:hover {
+  background-color: #0052cc;
+  box-shadow: 0 0 0px 4px #008eff38;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dd-button {
+  white-space: nowrap;
+  background-color: #ee0007;
+  color: white;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 11px;
+  padding-bottom: 10px;
+  border-radius: 9px;
+  font-size: 16px;
+  cursor: pointer;
+  height: 44px;
+  font-family: "SaaSduoTXT" !important;
+}
+
+.dd-button:hover {
+  display: inline-block;
+  box-shadow: 0 0 0px 4px #008eff38;
+  background-color: #cf0006;
+}
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #d4d4d7;
+  border-radius: 9px;
+  padding: 0;
+  padding-top: 13px !important;
+  padding-bottom: 2px;
+  color: #1b1b20 !important;
+  font-family: "SaaSduoPAR" !important;
+  font-size: 20px !important;
+  margin: 10px 0 0 -82px !important;
+  background-color: #ffffff;
+  text-decoration: none !important;
+  list-style-type: none;
+  text-align: center !important;
+  box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%),
+    -2px 11px 5.48831px rgba(0, 0, 0, 0.0400741),
+    0px -18px 10.9766px rgba(0, 0, 0, 0.0499982),
+    0px 14px 20.5812px rgba(0, 0, 0, 0.0596004),
+    0px 12px 41.1623px rgba(0, 0, 0, 0.0709366),
+    -20px 0px 89.1851px rgba(0, 0, 0, 0.09);
+}
+
+.dd-input + .dd-menu {
+  display: none;
+}
+
+.dd-input:checked + .dd-menu {
+  display: block;
+}
+
+.dd-menu li {
+  padding: 17px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: "SaaSduoPAR" !important;
+  color: #1b1b20;
+  text-decoration: none !important;
+  font-size: 20px;
+  text-align: center !important;
+}
+
+.dd-menu li a {
+  display: block;
+  margin: -9px -20px;
+  padding: 7px 20px;
+  font-family: "SaaSduoPAR" !important;
+  color: #1b1b20;
+  text-decoration: none !important;
+  font-size: 20px;
+  text-align: center !important;
+}
+
+.dd-menu li a:hover {
+  color: #06f;
+}
+
+.dd-menu li.divider {
+  padding: 7px;
+  border-bottom: 1px solid #d4d4d7;
+  margin-bottom: 5px;
+  margin-top: -5px;
+}
+
+.elonmusk {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+
+.thunderbolt {
+  margin-top: 2px;
+}
+
+
+.embrasse {
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  background: #fff;
+  justify-content: center;
+}
+
+.saasduoentry {
+  width: 100%;
+  padding-top: 20px;
+  background: radial-gradient(
+      farthest-side at bottom left,
+      #7edd92,
+      transparent 500px
+    ),
+    radial-gradient(farthest-side at center, #fff, transparent),
+    radial-gradient(
+      farthest-side at top right,
+      #6ec500,
+      #cdff3f,
+      transparent 900px
+    ),
+    radial-gradient(
+      farthest-side at bottom right,
+      #eefdd1,
+      #2aac67,
+      transparent 900px
+    );
+}
+
+.saasduocontent {
+  max-width: 1150px;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  padding-right: 100px;
+}
+
+.containertri {
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  height: 60px !important;
+  z-index: 999;
+  position: sticky;
+}
+
+.columntri {
+  flex: 1;
+  padding: 0px;
+  box-sizing: border-box;
+  border: 0px solid transparent;
+  justify-content: center;
+}
+
+.column1tri {
+  justify-content: left;
+  text-align: left;
+}
+
+.column2tri {
+  justify-content: right;
+  text-align: right;
+  display: flex !important;
+  padding-top: 8px;
+}
+
+.footercolor {
+  background: #f4f4f4;
+  border-top: 1px solid #d4d4d7;
+
+  box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%),
+    -2px 11px 5.48831px rgb(188 188 188 / 4%),
+    0px -18px 10.9766px rgb(189 189 189 / 5%),
+    0px 14px 20.5812px rgb(203 203 203 / 6%),
+    0px 12px 41.1623px rgb(163 163 163 / 7%),
+    -20px 0px 89.1851px rgb(255 255 255 / 9%);
+}
+
+.cristalinefooter {
+  color: #5d5c69;
+  font-size: 12px;
+  font-family: "saasduoPAR" !important;
+  line-height: 22px;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 26px;
+  margin-bottom: 23px;
+  cursor: default;
+}
+
+.cristalinefooterlink {
+  color: #06f;
+  font-size: 12px;
+  font-family: "saasduoPAR" !important;
+  text-decoration: none !important;
+}
+
+.cristalinefooterlink:hover {
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(#49c04f, #2aac67, #79db22);
+  -webkit-background-clip: text;
+}
+
+.containerzapier {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1150px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 0px;
+  padding-right: 0px;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.columnzapier {
+  flex-basis: calc(25% - 20px);
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.full-widthzapier {
+  padding: 20px;
+  box-sizing: border-box;
+  border-top: 1px solid #d4d4d7;
+}
+
+.flex-containertoz {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.colonnetoz {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.colonne-l {
+  font-size: 12px;
+}
+
+.colonne-r {
+  background-color: #ffd000;
+  border-radius: 9px;
+  display: flex;
   align-items: left;
   justify-content: left;
-  max-width: 600px;
+  color: #333;
+  box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%),
+    -2px 11px 5.48831px rgb(188 188 188 / 4%),
+    0px -18px 10.9766px rgb(189 189 189 / 5%),
+    0px 14px 20.5812px rgb(203 203 203 / 6%),
+    0px 12px 41.1623px rgb(163 163 163 / 7%),
+    -20px 0px 89.1851px rgb(255 255 255 / 9%);
 }
 
-p,
-label {
-  font-size: 1.25rem;
-}
-
-/* Title h1 style */
-h1 {
-  color: #2800FF;
-  font-family: HK Grotesk;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 100px;
-  line-height: 105%;
-  margin: 2rem 0 0;
-}
-
-/* Very light scaling for our illustration */
-.illo-container {
+.containerfix {
   display: flex;
-  justify-content: flex-end;
-}
-.illustration {
-  max-width: 100%;
-  max-height: 150px;
-  margin-top: 1rem;
-}
-
-/* Styles for our poll form and its results */
-.poll-form,
-.poll-results {
-  background-color: #FFF3FC;
-  padding: 0 16px 16px 16px;
-  border-radius: 8px;
-}
-.poll-form button:hover {
-  cursor: pointer;
-  box-shadow: -8px 4px 20px var(--color-primary);
-}
-button,
-input {
-  font-family: inherit;
-  font-size: 100%;
-  background: #FFFFFF;
-  border: 1px solid #000000;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
   box-sizing: border-box;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
 }
-button {
+
+.input-fieldfix {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.red-buttonfix {
+  width: 100%;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-}
-label {
-  color: #000000;
-  font-weight: bold;
+  font-family: "saasduoBTN" !important;
 }
 
-/* Instructions */
-.instructions {
-  margin: 1rem auto 0;
-}
-.instructions p {
-  font-size: 1rem;
-}
-h2 {
-  color: #2800FF;
+.two-column-containerprice {
+  display: flex;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  gap: 20px;
 }
 
-/* Admin page */
-table {
+.left-columnprice {
+  flex: 35%;
+  padding: 20px;
+  border-radius: 9px;
+
+  background: #f4f4f4;
+  border: 1px solid #d4d4d7;
+  box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%),
+    -2px 11px 5.48831px rgb(188 188 188 / 4%),
+    0px -18px 10.9766px rgb(189 189 189 / 5%),
+    0px 14px 20.5812px rgb(203 203 203 / 6%),
+    0px 12px 41.1623px rgb(163 163 163 / 7%),
+    -20px 0px 89.1851px rgb(255 255 255 / 9%);
+}
+
+.right-columnprice {
+  flex: 40%;
+  padding: 20px;
+  border-radius: 9px;
+  background: #f4f4f4;
+  border: 1px solid #d4d4d7;
+  box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%),
+    -2px 11px 5.48831px rgb(188 188 188 / 4%),
+    0px -18px 10.9766px rgb(189 189 189 / 5%),
+    0px 14px 20.5812px rgb(203 203 203 / 6%),
+    0px 12px 41.1623px rgb(163 163 163 / 7%),
+    -20px 0px 89.1851px rgb(255 255 255 / 9%);
+}
+
+.doright-columnprice {
+  flex: 25%;
+  padding: 20px;
+  border-radius: 9px;
+  background: #f4f4f4;
+  border: 1px solid #d4d4d7;
+  box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%),
+    -2px 11px 5.48831px rgb(188 188 188 / 4%),
+    0px -18px 10.9766px rgb(189 189 189 / 5%),
+    0px 14px 20.5812px rgb(203 203 203 / 6%),
+    0px 12px 41.1623px rgb(163 163 163 / 7%),
+    -20px 0px 89.1851px rgb(255 255 255 / 9%);
+}
+
+.two-column-containerprice1 {
+  display: flex;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.left-columnprice1 {
+  flex: 25%;
+  padding: 20px;
+  border-radius: 9px;
+
+  background: #f4f4f4;
+  border: 1px solid #d4d4d7;
+  box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%),
+    -2px 11px 5.48831px rgb(188 188 188 / 4%),
+    0px -18px 10.9766px rgb(189 189 189 / 5%),
+    0px 14px 20.5812px rgb(203 203 203 / 6%),
+    0px 12px 41.1623px rgb(163 163 163 / 7%),
+    -20px 0px 89.1851px rgb(255 255 255 / 9%);
+}
+
+.right-columnprice1 {
+  flex: 40%;
+  padding: 20px;
+  border-radius: 9px;
+  background: #f4f4f4;
+  border: 1px solid #d4d4d7;
+  box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%),
+    -2px 11px 5.48831px rgb(188 188 188 / 4%),
+    0px -18px 10.9766px rgb(189 189 189 / 5%),
+    0px 14px 20.5812px rgb(203 203 203 / 6%),
+    0px 12px 41.1623px rgb(163 163 163 / 7%),
+    -20px 0px 89.1851px rgb(255 255 255 / 9%);
+}
+
+.doright-columnprice1 {
+  flex: 35%;
+  padding: 20px;
+  border-radius: 9px;
+  background: #f4f4f4;
+  border: 1px solid #d4d4d7;
+  box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%),
+    -2px 11px 5.48831px rgb(188 188 188 / 4%),
+    0px -18px 10.9766px rgb(189 189 189 / 5%),
+    0px 14px 20.5812px rgb(203 203 203 / 6%),
+    0px 12px 41.1623px rgb(163 163 163 / 7%),
+    -20px 0px 89.1851px rgb(255 255 255 / 9%);
+}
+
+.main-container101 {
+  display: flex;
+  max-width: 1150px;
+  grid-gap: 10px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.column101 {
+  display: flex;
+  width: 100%;
+  border: 1px solid #ccc;
+  margin: 0px;
+  padding: 20px;
+  border-radius: 9px;
+}
+
+.sub-column101 {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.sub-column101-left {
+  display: block;
+  align-items: center;
+  padding: 0px;
+  flex: 50% !important;
+}
+
+.sub-column101-right {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  flex: 50% !important;
+  text-align: right;
+}
+
+.text101 {
+  font-size: 18px;
+}
+
+.image101Y {
+  width: 100%;
+  max-width: 100px;
+  margin-left: auto;
+}
+
+.image101 {
+  width: 100%;
+  max-width: 100%;
+}
+
+.column101Y {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 0px;
+  display: flex;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  background: #ffd000;
+  border-radius: 9px;
+}
+
+.sub-column101-leftY {
+  display: block;
+  align-items: center;
+  padding: 10px;
+  flex: 50%;
+}
+
+.sub-column101-rightY {
+  display: block;
+  align-items: center;
+  padding: 10px;
+  flex: 50%;
+  text-align: right;
+}
+
+.txt0001101 {
+  font-size: 30px;
+  font-family: "saasduoTIL" !important;
+  letter-spacing: -0.5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  cursor: default;
+  color: #1b1b20;
+  margin-top: 22px;
+  white-space: nowrap;
+}
+
+.txt0002101 {
+  font-size: 22px;
+  font-family: "saasduoPAR" !important;
+  line-height: 38px;
+  margin-top: -10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  cursor: default;
+  color: #1b1b20;
+}
+
+.red-flatty {
+  padding: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: default;
+  font-size: 18px;
+  padding: 15px 15px 15px 15px;
+  font-family: "saasduoBTN" !important;
+}
+
+.blue-flatty {
+  background-color: #06f;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 19px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  padding-top: 15px;
+
+  padding-bottom: 14px;
+
+  font-family: "saasduoBTN" !important;
+  height: 53px;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+.blue-flatty:hover {
+  background-color: #1128f5;
+  box-shadow: 0 0 0px 4px #008eff38;
+}
+
+.colonne-containerz {
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  grid-gap: 10px;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.colonnez {
+  flex: 1;
+  padding: 0px;
+  border: 1px solid #ccc;
+  border-radius: 9px;
+}
+
+.kfc {
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 0px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.kfc-left {
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  padding: 20px;
+  cursor: default;
+}
+
+.kfc-right {
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  padding: 20px;
+  cursor: default;
+}
+
+.kfcimg {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.priceblock {
+  max-width: 1150px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  justify-content: center;
+  text-align: center;
+  display: block;
+}
+
+.priceblockTXT {
+  width: 100%;
+  font-size: 54px !important;
+  font-family: "saasduoTIL" !important;
+  letter-spacing: -1.5px !important;
+  color: #1b1b20;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center !important;
+  padding-top: 30px;
+  margin-bottom: 10px;
+  cursor: default;
+}
+
+.priceblockTXT2 {
+  width: 100%;
+  font-size: 22px !important;
+  font-family: "saasduoPAR" !important;
+  letter-spacing: 0px;
+  color: #1b1b20;
+  letter-spacing: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center !important;
+  max-width: 1000px;
+  line-height: 37px;
+  cursor: default;
+}
+
+.priceblockTXT2footer {
+  width: 100%;
+  font-size: 22px !important;
+  font-family: "saasduoPAR" !important;
+  letter-spacing: 0px;
+  color: #1b1b20;
+  letter-spacing: 0px;
+  padding-left: 0px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left !important;
+  max-width: 1000px;
+  line-height: 37px;
+  cursor: default;
+}
+
+.red-price-button {
+  background-color: #ee0007;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 19px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  padding-top: 15px;
+
+  padding-bottom: 14px;
+
+  font-family: "saasduoBTN" !important;
+  height: 53px;
+  white-space: nowrap;
+}
+
+.red-price-button:hover {
+  background-color: #cf0006;
+  box-shadow: 0 0 0px 4px #008eff38;
+}
+
+.priceimg {
+  width: 250px;
+  margin-top: 15px;
+  margin-bottom: 38px;
+  text-align: center !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.endillust {
+  width: 250px;
+  margin-top: 15px;
+  margin-bottom: 23px;
+  text-align: center !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.footerimg {
+  width: 100%;
+  margin-top: -2px;
+  margin-bottom: 10px;
+  padding-right: 0px;
+  padding-left: 0px;
+  text-align: center !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.containerplant {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 0px solid transparent;
+
+  background: radial-gradient(
+      farthest-side at bottom left,
+      #7edd92,
+      transparent 500px
+    ),
+    radial-gradient(farthest-side at center, #fff, transparent),
+    radial-gradient(
+      farthest-side at top right,
+      #6ec500,
+      #cdff3f,
+      transparent 900px
+    ),
+    radial-gradient(
+      farthest-side at bottom right,
+      #eefdd1,
+      #2aac67,
+      transparent 900px
+    );
+}
+
+.viewplant {
+  max-width: 1100px;
+  margin-right: auto;
+  display: block;
+  margin-right: auto;
   text-align: left;
-  border-collapse: collapse;
-  background-color: #FFF3FC;
+  justify-content: left;
+  padding-bottom: 50px;
+  padding-top: 30px;
+  margin-left: 70px;
 }
-td,
-th {
-  border: 2px solid #FFFFFF;
-  padding: 0.5rem;
+
+.columnplant {
+  flex: 1;
+  padding: 10px;
+  background-color: transparent;
+  justify-content: center;
 }
-p a {
+
+.divplant {
+  padding: 30px;
+  background-color: #ffd000;
+  border: 0px solid transparent;
+  width: 400px;
+  border-radius: 9px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.TXTintro {
+  font-size: 81px !important;
+  font-family: "saasduoTIL" !important;
+  letter-spacing: -2px;
+  padding-left: 0px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  cursor: default;
+
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(#49c04f, #2aac67, #79db22);
+  -webkit-background-clip: text;
+  line-height: 80px;
+  margin-top: 20px;
+}
+
+.TXTintro2 {
+  font-size: 81px !important;
+  font-family: "saasduoTIL" !important;
+  letter-spacing: -2px;
+  padding-left: 0px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  line-height: 0px;
+  color: black;
+  margin-top: -37px;
+  margin-bottom: 65px;
+  cursor: default;
+}
+
+.TXTintro3 {
+  font-size: 24px !important;
+  font-family: "saasduoPAR" !important;
+  letter-spacing: 0px;
+  color: #1b1b20;
+  letter-spacing: 0px;
+  padding-left: 0px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  line-height: 40px;
+  cursor: default;
+}
+
+.form-container1 {
+  display: flex;
+  align-items: center;
+  width: 460px;
+}
+
+input[type="text" i] {
+  padding: 0px 0px;
+}
+
+input[type="text" i]:hover {
+  padding: 0px 0px;
+}
+
+input[type="text" i]:focus {
+  padding: 0px 0px;
+}
+
+.input-fieldfix1 {
+  flex: 3;
+  height: 54px;
+  border: 3px solid #ffd000;
+  border-radius: 9px;
+  margin-right: 10px;
+  padding-top: 14px;
+  padding-bottom: 10px;
+  font-family: "saasduoPAR";
+  font-size: 19px;
+  text-align: center;
+  color: #5d5c69 !important;
+}
+
+.input-fieldfix1:hover {
+  box-shadow: 0 0 0px 4px #008eff38;
+}
+.input-fieldfix1:focus {
+  outline: none !important;
+  flex: 3;
+  height: 54px;
+  border: 3px solid #ffd000;
+  border-radius: 9px;
+  margin-right: 10px;
+  padding-top: 14px;
+  padding-bottom: 10px;
+  font-family: "saasduoPAR";
+  font-size: 19px;
+  text-align: center;
+  color: #5d5c69;
+}
+
+.input-fieldfix1::placeholder {
+  font-family: "saasduoPAR" !important;
+  font-size: 19px;
+}
+
+.red-buttonfix1 {
+  flex: 1.3;
+  background-color: #ee0007;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 19px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  padding-top: 15px;
+
+  padding-bottom: 14px;
+
+  font-family: "saasduoBTN" !important;
+  height: 53px;
+}
+
+.red-buttonfix1:hover {
+  background-color: #cf0006;
+  box-shadow: 0 0 0px 4px #008eff38;
+}
+
+.blue-flatty93 {
+  background-color: #06f;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 19px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  padding-top: 15px;
+
+  padding-bottom: 14px;
+
+  font-family: "saasduoBTN" !important;
+  height: 53px;
+  white-space: nowrap;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-right: 10px;
+}
+
+.blue-flatty93:hover {
+  background-color: #1128f5;
+  box-shadow: 0 0 0px 4px #008eff38;
+}
+
+.TXTreminder {
+  font-size: 22px;
+  font-family: "saasduoPAR" !important;
+  line-height: 38px;
+  margin-top: 20px;
+  margin-bottom: 19px;
+  padding-left: 15px;
+  padding-right: 10px;
+  color: #1b1b20;
+  cursor: default;
+}
+
+.pages293 {
+  width: 100%;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.TXTpages293 {
+  font-size: 22px;
+  font-family: "saasduoPAR" !important;
+  line-height: 38px;
+  margin-top: -10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  color: #1b1b20;
+}
+
+.pages293-blue-flatty {
+  background-color: #06f;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 19px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  padding-top: 15px;
+
+  padding-bottom: 14px;
+
+  font-family: "saasduoBTN" !important;
+  height: 53px;
+  white-space: nowrap;
+}
+
+.pages293-blue-flatty:hover {
+  background-color: #1128f5;
+  box-shadow: 0 0 0px 4px #008eff38;
+}
+
+.catapult-login-confluence {
+  background: transparent !important;
+  text-align: center;
+}
+
+.propelant {
+  padding-top: 9px;
+  width: 180px !important;
+  margin-bottom: 40px;
+}
+
+.propelant:hover {
+  transform: scale(1.05);
+  transition-duration: 0.2s;
+}
+
+.login-door {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  text-align: left;
+  flex-flow: row wrap;
+  justify-content: left;
+  margin-right: 20px;
+  margin-left: 20px;
+  border: 1px solid #d4d4d7;
+  margin-left: auto;
+  margin-right: auto;
+  background: #f4f4f4;
+  border-radius: 9px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+@media (min-width: 100px) and (max-width: 819px) {
+  .login-door {
+    width: 93%;
+    max-width: 500px;
+    display: block;
+    text-align: left;
+    flex-flow: row wrap;
+    justify-content: left;
+    margin-right: 20px;
+    margin-left: 20px;
+    border: 1px solid #d4d4d7;
+    margin-left: auto;
+    margin-right: auto;
+    background: #f4f4f4;
+    border-radius: 9px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.andreasmarques1 {
+  margin-bottom: 30px !important;
+}
+
+.viewportpost {
+  width: 80% !important;
+  max-width: 400px !important;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.cube-btn12 {
+  margin-bottom: 20px;
+  border: 1px #316dca;
+  border-radius: 10px;
+  margin-top: -6px;
   text-decoration: none;
-  font-weight: bold;
+  color: #cdd9e5 !important;
+  background: #316dca !important;
+  font-size: 18px !important;
+  height: 52px !important;
+  padding-top: 16px !important;
+  padding-left: 22px !important;
+  padding-right: 23px !important;
+  width: 100% !important;
+  padding-bottom: 11px !important;
 }
-p.error,
-p.error a:link,
-p.error a:visited {
-  color: #2800FF;
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .cube-btn12 {
+  }
 }
-.results {
-  padding-top:10px;
+
+@media (min-width: 100px) and (max-width: 819px) {
+  .cube-btn12 {
+  }
+}
+.andreasfoot {
+  margin-top: -5px !important;
+}
+
+.blue-flatty-link {
+  background-color: #06f;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 19px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  padding-top: 15px;
+  width: 100%;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+
+  font-family: "saasduoBTN" !important;
+  height: 53px;
+  white-space: nowrap;
+}
+
+.blue-flatty-link:hover {
+  background-color: #1128f5;
+  box-shadow: 0 0 0px 4px #008eff38;
+}
+
+.red-flatty-link {
+  background-color: #ee0007;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 19px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-bottom: 14px;
+  padding-top: 15px;
+  width: 100%;
+  padding-bottom: 14px;
+
+  font-family: "saasduoBTN" !important;
+  height: 53px;
+  white-space: nowrap;
+}
+
+.red-flatty-link:hover {
+  background-color: #cf0006;
+  box-shadow: 0 0 0px 4px #008eff38;
+}
+
+.TXTpages {
+  font-size: 30px;
+  font-family: "saasduoTIL" !important;
+  text-align: left !important;
+  letter-spacing: -0.5px;
+  color: #1b1b20;
+  padding-left: 0px;
+  padding-right: 0px;
+  white-space: nowrap !important;
+  padding-bottom: 5px;
+  padding-top: 12px;
+}
+
+.TXTpages2 {
+  font-size: 22px;
+  font-family: "saasduoPAR" !important;
+  line-height: 38px;
+  margin-top: -10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  color: #1b1b20;
+  text-align: left !important;
+  padding-bottom: 12px;
+}
+
+.cristalinefooterTXT {
+  color: #5d5c69;
+  font-size: 12px;
+  font-family: "saasduoPAR" !important;
+  line-height: 22px;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 26px;
+  margin-bottom: 23px;
+  text-align: left !important;
+}
+
+.cristalinefooterlinkTXT {
+  color: #06f;
+  font-size: 12px;
+  font-family: "saasduoPAR" !important;
+  text-decoration: none !important;
+  text-align: left !important;
+}
+
+.cristalinefooterlinkTXT:hover {
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(#49c04f, #2aac67, #79db22);
+  -webkit-background-clip: text;
+}
+
+.RMSTXT {
+  color: #06f;
+  text-decoration: none !important;
+}
+
+.RMSTXT:hover {
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(#49c04f, #2aac67, #79db22);
+  -webkit-background-clip: text;
+}
+
+
+
+
+@media (min-width: 100px) and (max-width: 819px) {
+.grid-container {
+    grid-template-columns: repeat(1, 1fr);
+margin-bottom: -15px;
+      gap: 22px;
+}
+}
+
+
+
+@media (min-width: 100px) and (max-width: 819px) {
+.grid-item {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+
+
+
+@media (min-width: 100px) and (max-width: 819px) {
+.colonne-containerz {
+  grid-template-columns: repeat(1, 1fr);
+    padding-left: 20px;
+  padding-right: 20px;
+  gap: 21px;
+}
+}
+
+
+
+@media (min-width: 100px) and (max-width: 1000px) {
+.kfc {
+  grid-template-columns: repeat(1, 1fr);
+}
+}
+
+@media (min-width: 100px) and (max-width: 819px) {
+.two-column-container {
+    display: none;
+}
+}
+
+@media (min-width: 100px) and (max-width: 819px) {
+.containerzapier {
+    display: block;
+  padding-left: 20px;
+    padding-right: 20px;
+}
+}
+
+
+  
+  @media (min-width: 100px) and (max-width: 819px) {
+.triathlon-button{
+    display: none;
+}
+}
+
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+.form-container1 {
+    display: block;
+    width: 100%;
+}
+}
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+.saasduocontent {
+    padding-right: 10px;
+       padding-left: 10px;
+}
+}
+
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+input[type="text" i] {
+    width: 100%;
+}
+}
+
+
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+.red-buttonfix1 {
+    width: 100%;
+  margin-top: 10px;
+}
+}
+
+
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+
+.containertri {
+   padding-left: 9px !important;
+     padding-right: 9px !important;
+
+}}
+
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+
+.saasduoentry {
+background: linear-gradient(142deg, #ffffff, #f9fdff, #ebfeff, #ddffff, #d9fff0, #cef8dd, #c9f1c8, #c9e8b0, #aad99a, #88ca86, #61bb75, #2aac67);
+
+}}
+
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+.TXTintro {
+text-align: center;
+      padding-left: 0px;
+  padding-right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+    margin-bottom: 75px;
+
+}}
+
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+.TXTintro2 {
+text-align: center;
+  line-height: 80px;
+  margin-top: -55px;
+  margin-bottom: -2px;
+  
+    padding-left: 0px;
+  padding-right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}}
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+.TXTintro3 {
+text-align: center;
+  
+    padding-left: 7px;
+  padding-right: 7px;
+  margin-left: auto;
+  margin-right: auto;
+}}
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+.priceblockTXT2 {  
+    padding-left: 20px;
+  padding-right: 20px;
+}}
+
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+.saasduodesklandscapeb {  
+ border-radius: 70px 70px 0px 0px;
+  padding-left: 20px;
+    padding-right: 20px;
+}}
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+.saasduodesklandscapeb2 {  
+ border-radius: 0px 0px 70px 70px;
+  padding-left: 20px;
+    padding-right: 20px;
+}}
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+
+.kfcimg {
+    margin-top: -15px;
+      margin-bottom: -7px;
+  max-width: 290px;
+    margin-left: auto;
+    margin-right: auto;
+}}
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+
+.tapresponsive {
+    padding-top: 15px;
+      padding-bottom: 15px;
+}}
+
+
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+
+.pages293 {
+padding-left: 0px;
+    padding-right: 0px;
+}}
+
+
+
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+
+.TTSTTS {
+padding-left: 20px !important;
+    padding-right: 20px !important;
+}}
+
+
+
+
+
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+
+.footerimg {
+        padding-right: 25px;
+}}
+
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+
+.txt0009zapiertop {
+        padding-top: 10px;
+}}
+
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+
+.cristalinefooter {
+        padding-left: 2px;
+          padding-right: 2px;
+
+}}
+
+
+@media (min-width: 820px) and (max-width: 1166px)
+ 
+{
+.saasduoentry {
+        padding-left: 15px;
+  padding-right: 15px; 
+}
+}
+
+
+
+@media (min-width: 820px) and (max-width: 1166px)
+ 
+{
+.containerzapier {
+        padding-left: 15px;
+  padding-right: 15px; 
+}
+}
+
+
+@media (min-width: 820px) and (max-width: 1166px)
+ 
+{
+.colonne-containerz {
+        padding-left: 15px;
+  padding-right: 15px; 
+}
+}
+
+
+@media (min-width: 820px) and (max-width: 1166px)
+ 
+{
+.kfcimg {
+        margin-top: 15px;
+  max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+
+
+
+
+@media (min-width: 820px) and (max-width: 1166px) {
+.saasduodesklandscapeb {  
+ border-radius: 120px 120px 0px 0px;
+  padding-left: 20px;
+    padding-right: 20px;
+}}
+
+
+@media (min-width: 820px) and (max-width: 1166px) {
+.saasduodesklandscapeb2 {  
+ border-radius: 0px 0px 120px 120px;
+  padding-left: 20px;
+    padding-right: 20px;
+}}
+
+
+
+
+
+
+
+
+@media (min-width: 820px) and (max-width: 1166px)
+ 
+{
+.saasduo9282 {
+        padding-left: 15px;
+  padding-right: 15px; 
+}
+}
+
+
+
+@media (min-width: 820px) and (max-width: 1166px) {
+
+.containertri {
+   padding-left: 9px !important;
+     padding-right: 9px !important;
+
+}}
+
+
+
+
+
+@media (min-width: 820px) and (max-width: 1066px)  {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+
+
+@media (min-width: 820px) and (max-width: 1166px) and (orientation: portrait) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+@media (min-width: 820px) and (max-width: 1166px) and (orientation: portrait) {
+    .two-column-container {
+        display: none;
+    }
+}
+
+
+@media (min-width: 820px) and (max-width: 1166px) and (orientation: portrait)
+ 
+{
+.colonne-containerz {
+        padding-left: 45px;
+  padding-right: 45px; 
+  grid-template-columns: repeat(1, 1fr);
+}
+}
+
+
+
+@media (min-width: 820px) and (max-width: 1166px) and (orientation: portrait)
+ 
+{
+.gucci {
+      margin-top: -20px;
+}
+}
+
+
+
+
+  @media (min-width: 100px) and (max-width: 819px) and (orientation: landscape) {
+
+.kfcimg {
+    max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}}
+
+
+
+  @media (min-width: 100px) and (max-width: 819px) and (orientation: landscape) {
+
+.colonne-containerz  {
+       grid-template-columns: repeat(2, 1fr);
+
+}}
+
+
+  @media (min-width: 100px) and (max-width: 819px) and (orientation: landscape) {
+
+.footerimg {
+      max-width: 390px;
+
+}}
+
+
+
+
+
+
+@media (min-width: 820px) and (max-width: 1166px) and (orientation: portrait)
+ 
+{
+.containerzapier {
+        padding-left: 15px;
+  padding-right: 15px; 
+}
+}
+
+
+
+
+
+
+
+@media (min-width: 100px) and (max-width: 819px) and (orientation: portrait)
+ 
+{
+.illustrationcapebRED {
+       margin-bottom: 25px;
+  margin-top: 39px;
+}
+}
+
+
+
+
+@media (min-width: 100px) and (max-width: 819px) and (orientation: portrait)
+ 
+{
+.illustrationcapebYELLOW {
+       margin-bottom: 10px;
+  margin-top: 55px;
+}
 }
