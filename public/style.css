@@ -2604,19 +2604,20 @@ padding-left: 20px !important;
     align-items: center;
     margin-bottom: 10px;
     width: 100%;
-    height: 54px;
 }
 
-
+input[type="radio"] {
+    display: none;
+}
 
 label {
-    margin-left: 10px;
     cursor: pointer;
     flex-grow: 1;
-    height: 100%;
+    height: 54px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding-right: 20px; /* Ajout de padding à droite */
     border: 2px solid transparent;
     transition: border 0.3s;
 }
