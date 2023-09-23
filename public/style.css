@@ -2693,6 +2693,8 @@ input[type="radio"]:checked + label {
     background: #ebf3ff;
   box-shadow: 0 0 0px 4px #008eff38;
   color: #06f;
+  
+  
 
 }
 
@@ -2755,6 +2757,7 @@ input:focus, textarea:focus, select:focus {
   font-size: 19px;
   text-align: center;
   color: #5d5c69 !important;
+  line-height: 30px;
 }
 
 
