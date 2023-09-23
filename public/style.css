@@ -2749,3 +2749,14 @@ input:focus, textarea:focus, select:focus {
 .button-group input[type="radio"]:checked + label {
     border: 1px solid red;
 }
+
+
+
+.blue-link {
+    color: blue;
+    text-decoration: none;
+}
+
+.blue-link:hover {
+    text-decoration: underline;
+}
