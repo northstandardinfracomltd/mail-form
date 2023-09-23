@@ -1758,11 +1758,11 @@ width: 100% !important;
 .form-containercontact {
   display: block;
   align-items: center;
-  width: 460px;
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 
@@ -2640,11 +2640,13 @@ label {
 
 label:hover {
 box-shadow: 0 0 0px 4px #008eff38;
+      transform: scale(1.01);
+    transition-duration: 0.2s;
 }
 
 
 input[type="radio"]:checked + label {
-    border: 1px solid #06f;
+    border: 1px solid #85b6ff;
     background: #ebf3ff;
   box-shadow: 0 0 0px 4px #008eff38;
   color: #06f;
