@@ -1753,6 +1753,16 @@ img.navlogo {
   width: 460px;
 }
 
+
+.form-containercontact {
+  display: block;
+  align-items: center;
+  width: 460px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 input[type="text" i] {
   padding: 0px 0px;
 }
@@ -2178,6 +2188,16 @@ margin-bottom: -15px;
     display: none;
 }
 }
+
+
+
+  @media (min-width: 100px) and (max-width: 819px) {
+.form-containercontact {
+    display: block;
+    width: 100%;
+}
+}
+
 
 
 
