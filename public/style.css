@@ -2637,6 +2637,7 @@ input[type="radio"] {
 
 label {
     cursor: pointer;
+   transition: 0s; 
     flex-grow: 1;
     height: 54px;
     display: flex;
@@ -2660,19 +2661,18 @@ label {
 
 
 label:hover {
-box-shadow: 0 0 0px 4px #008eff38;
       transform: scale(1.01);
     transition-duration: 0.2s;
+   transition: 0s; 
+
 }
 
 
 input[type="radio"]:checked + label {
-    border: 1px solid #85b6ff;
-    background: linear-gradient(45deg, #0079b3, #2aac67);
-  box-shadow: 0 0 0px 4px #008eff38;
+    border: 3px solid #79db22;
+    background: #2aac67;
   color: #fff;
-  
-  
+   transition: 0s; 
 
 }
 
