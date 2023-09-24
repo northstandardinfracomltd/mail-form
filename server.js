@@ -50,19 +50,6 @@ fastify.get("/", async (request, reply) => {
   */
   let params = request.query.raw ? {} : { seo: seo };
 
-  // Get the available choices from the database
-  const options = await db.getOptions();
-  if (options) {
-    params.optionNames = options.map((choice) => choice.language);
-    params.optionCounts = options.map((choice) => choice.picks);
-  }
-  // Let the user know if there was a db error
-  else params.error = data.errorMessage;
-
-  // Check in case the data is empty or not setup yet
-  if (options && params.optionNames.length < 1)
-    params.setup = data.setupMessage;
-
   // ADD PARAMS FROM TODO HERE
 
   // Send the page options or raw JSON data if the client requested it
@@ -86,23 +73,26 @@ fastify.post("/", async (request, reply) => {
   params.results = true;
   let options;
   
-  if 
-  phone
-  requirements
-  choix
+  // if 
+  // phone
+  // requirements
+  // choix
   
-  console.log(request.body);
+  let r = await db.saveRequest(request.body);
+  console.log(r);
+  
+  // console.log(request.body);
 
   // We have a vote - send to the db helper to process and return results
-  if (request.body.language) {
-    options = await db.processVote(request.body.language);
-    if (options) {
-      // We send the choices and numbers in parallel arrays
-      params.optionNames = options.map((choice) => choice.language);
-      params.optionCounts = options.map((choice) => choice.picks);
-    }
-  }
-  params.error = options ? null : data.errorMessage;
+  // if (request.body.language) {
+  //   options = await db.processVote(request.body.language);
+  //   if (options) {
+  //     // We send the choices and numbers in parallel arrays
+  //     params.optionNames = options.map((choice) => choice.language);
+  //     params.optionCounts = options.map((choice) => choice.picks);
+  //   }
+  // }
+  // params.error = options ? null : data.errorMessage;
 
   // Return the info to the client
   return request.query.raw
@@ -119,7 +109,7 @@ fastify.get("/logs", async (request, reply) => {
   let params = request.query.raw ? {} : { seo: seo };
 
   // Get the log history from the db
-  params.optionHistory = await db.getLogs();
+  params.optionHistory = await db.getRequests();
 
   // Let the user know if there's an error
   params.error = params.optionHistory ? null : data.errorMessage;
@@ -128,49 +118,6 @@ fastify.get("/logs", async (request, reply) => {
   return request.query.raw
     ? reply.send(params)
     : reply.view("/src/pages/admin.hbs", params);
-});
-
-/**
- * Admin endpoint to empty all logs
- *
- * Requires authorization (see setup instructions in README)
- * If auth fails, return a 401 and the log list
- * If auth is successful, empty the history
- */
-fastify.post("/reset", async (request, reply) => {
-  let params = request.query.raw ? {} : { seo: seo };
-
-  /* 
-  Authenticate the user request by checking against the env key variable
-  - make sure we have a key in the env and body, and that they match
-  */
-  if (
-    !request.body.key ||
-    request.body.key.length < 1 ||
-    !process.env.ADMIN_KEY ||
-    request.body.key !== process.env.ADMIN_KEY
-  ) {
-    console.error("Auth fail");
-
-    // Auth failed, return the log data plus a failed flag
-    params.failed = "You entered invalid credentials!";
-
-    // Get the log list
-    params.optionHistory = await db.getLogs();
-  } else {
-    // We have a valid key and can clear the log
-    params.optionHistory = await db.clearHistory();
-
-    // Check for errors - method would return false value
-    params.error = params.optionHistory ? null : data.errorMessage;
-  }
-
-  // Send a 401 if auth failed, 200 otherwise
-  const status = params.failed ? 401 : 200;
-  // Send an unauthorized status code if the user credentials failed
-  return request.query.raw
-    ? reply.status(status).send(params)
-    : reply.status(status).view("/src/pages/admin.hbs", params);
 });
 
 // Run the server and report out to the logs
