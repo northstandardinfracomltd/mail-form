@@ -2869,15 +2869,27 @@ box-shadow: 0 0 0px 4px #008eff38;
           font-family: "saasduoPAR";
     font-size: 22px !important;
   color: #1B1B20;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
   line-height: 30px;
   padding-top: 50px;
-    padding-bottom: 8px;
+    padding-bottom: 6px;
   line-height: 33px;
   text-decoration: none !important;
 cursor: default;
 }
+
+
+@media (min-width: 100px) and (max-width: 800px) {
+.blue-txt932 {
+
+  padding-left: 5px;
+  padding-right: 5px;
+    padding-bottom: 2px;
+
+}
+}
+
 
 
 .blue-txt932x {
