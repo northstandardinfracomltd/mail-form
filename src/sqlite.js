@@ -68,11 +68,12 @@ module.exports = {
           data.email,
           data.phone,
           data.requirements,
-          data.choix,
+          data.category,
           new Date().toISOString()
         ]);
     } catch (dbError) {
       console.error(dbError);
+      return false;
     }
   },
 };

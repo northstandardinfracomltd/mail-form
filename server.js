@@ -66,18 +66,13 @@ fastify.get("/", async (request, reply) => {
  * Return updated list of votes
  */
 fastify.post("/", async (request, reply) => {
-  // We only send seo if the client is requesting the front-end ui
-  let params = request.query.raw ? {} : { seo: seo };
+  let params = {};
 
-  // Flag to indicate we want to show the poll results instead of the poll form
   params.results = true;
+  params.inputErrors = [];
   let options;
   
-  // if 
-  // phone
-  // requirements
-  // choix
-  let data = {
+  let requestData = {
     email: request.body.email,
     phone: request.body.phone,
     requirements: request.body.requirements,
@@ -85,26 +80,26 @@ fastify.post("/", async (request, reply) => {
   };
   
   let inputErrors = [];
-  if (!data.email) {
+  if (!requestData.email) {
     inputErrors.push('Must specify your Email');
   }
-  if (!data.phone) {
+  if (!requestData.phone) {
     inputErrors.push('Must specify your Phone Number');
   }
-  if (!data.requirements) {
+  if (!requestData.requirements) {
     inputErrors.push('Must specify your requirements and ideas');
   }
-  if (!data.category) {
+  if (!requestData.category) {
     inputErrors.push('Must choose a Category');
   }
   
   if (inputErrors.length == 0) {
     let r = await db.saveRequest(request.body);
     console.log(r);
+    params.errors = r ? [] : [data.errorMessage]
   } else {
-    para
+    params.errors = inputErrors
   }
-  
 
   // Return the info to the client
   return request.query.raw
