@@ -109,9 +109,6 @@ fastify.post("/", async (request, reply) => {
   if (!requestData.requirements) {
     inputErrors.push('Must specify your requirements and ideas');
   }
-  if (!requestData.category) {
-    inputErrors.push('Must choose a Category');
-  }
   
   if (inputErrors.length == 0) {
     let resp = await db.saveRequest(requestData);

@@ -62,6 +62,13 @@ body {
   overflow-x: hidden;
 }
 
+
+button:focus {
+    outline: none;
+}
+
+
+
 .wrapper {
   min-height: var(--wrapper-height);
   display: grid;
