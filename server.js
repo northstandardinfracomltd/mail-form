@@ -89,7 +89,7 @@ fastify.post("/", async (request, reply) => {
   let params = {};
 
   params.results = true;
-  params.inputErrors = [];
+  params.errors = [];
   let options;
   
   let requestData = {
@@ -120,10 +120,11 @@ fastify.post("/", async (request, reply) => {
     params.errors = inputErrors
   }
 
-  // Return the info to the client
-  return request.query.raw
-    ? reply.send(params)
-    : reply.view("/src/pages/index.hbs", params);
+  // When successful redirect to saasduo.com
+  // Otherwise display the form with the errors
+  return params.errors.length > 0
+    ? reply.view("/src/pages/index.hbs", params)
+    : reply.redirect('https://saasduo.com/2973927302738923729376287352932693287325327323592352673823/'); //ok
 });
 
 // Run the server and report out to the logs
