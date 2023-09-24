@@ -77,47 +77,39 @@ fastify.post("/", async (request, reply) => {
   // phone
   // requirements
   // choix
+  let data = {
+    email: request.body.email,
+    phone: request.body.phone,
+    requirements: request.body.requirements,
+    category: request.body.choix,
+  };
   
-  let r = await db.saveRequest(request.body);
-  console.log(r);
+  let inputErrors = [];
+  if (!data.email) {
+    inputErrors.push('Must specify your Email');
+  }
+  if (!data.phone) {
+    inputErrors.push('Must specify your Phone Number');
+  }
+  if (!data.requirements) {
+    inputErrors.push('Must specify your requirements and ideas');
+  }
+  if (!data.category) {
+    inputErrors.push('Must choose a Category');
+  }
   
-  // console.log(request.body);
-
-  // We have a vote - send to the db helper to process and return results
-  // if (request.body.language) {
-  //   options = await db.processVote(request.body.language);
-  //   if (options) {
-  //     // We send the choices and numbers in parallel arrays
-  //     params.optionNames = options.map((choice) => choice.language);
-  //     params.optionCounts = options.map((choice) => choice.picks);
-  //   }
-  // }
-  // params.error = options ? null : data.errorMessage;
+  if (inputErrors.length == 0) {
+    let r = await db.saveRequest(request.body);
+    console.log(r);
+  } else {
+    para
+  }
+  
 
   // Return the info to the client
   return request.query.raw
     ? reply.send(params)
     : reply.view("/src/pages/index.hbs", params);
-});
-
-/**
- * Admin endpoint returns log of votes
- *
- * Send raw json or the admin handlebars page
- */
-fastify.get("/logs", async (request, reply) => {
-  let params = request.query.raw ? {} : { seo: seo };
-
-  // Get the log history from the db
-  params.optionHistory = await db.getRequests();
-
-  // Let the user know if there's an error
-  params.error = params.optionHistory ? null : data.errorMessage;
-
-  // Send the log list
-  return request.query.raw
-    ? reply.send(params)
-    : reply.view("/src/pages/admin.hbs", params);
 });
 
 // Run the server and report out to the logs
