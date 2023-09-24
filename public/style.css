@@ -2661,11 +2661,24 @@ label {
 
 
 label:hover {
-      transform: scale(1.01);
+      transform: scale(1.03);
     transition-duration: 0.2s;
    transition: 0s; 
 
 }
+
+
+@media (min-width: 100px) and (max-width: 800px) {
+label:hover {
+      transform: scale(1.00);
+    transition-duration: 0.2s;
+   transition: 0s; 
+
+}
+}
+
+
+
 
 
 input[type="radio"]:checked + label {
@@ -2867,6 +2880,19 @@ cursor: default;
 }
 
 
+.blue-txt932x {
+          font-family: "saasduoPAR";
+    font-size: 22px !important;
+  color: #1B1B20;
+  padding-left: 0px;
+  padding-right: 0px;
+  line-height: 30px;
+  padding-top: 30px;
+    padding-bottom: 22px;
+  line-height: 33px;
+  text-decoration: none !important;
+cursor: default;
+}
 
 
 
@@ -2883,6 +2909,18 @@ border-radius: 9px;
   text-decoration: none !important;
       box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(188 188 188 / 4%), 0px -18px 10.9766px rgb(189 189 189 / 5%), 0px 14px 20.5812px rgb(203 203 203 / 6%), 0px 12px 41.1623px rgb(163 163 163 / 7%), -20px 0px 89.1851px rgb(255 255 255 / 9%);
 }
+
+
+@media (min-width: 100px) and (max-width: 800px) {
+.prime2 {
+  padding-right: 36px;
+    padding-left: 36px;
+    padding-top: 0px;
+  padding-bottom: 20px;
+
+}
+}
+
 
 
 .prime2:hover {
