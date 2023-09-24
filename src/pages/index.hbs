@@ -67,6 +67,7 @@ These details help us analyze your guidelines — we typically reply within a da
             <br> <br> 
   <input
     type="text"
+         name="email"
     class="input-fieldfix1"
     placeholder="Enter your business email"
            oninput="this.value = this.value.toLowerCase();"
@@ -77,6 +78,7 @@ These details help us analyze your guidelines — we typically reply within a da
               <input
     type="text"
     class="input-fieldfix1"
+                     name="phone"
     placeholder="Enter your phone number"
   oninput="formatPhoneNumber(this);"
      maxlength="15"
@@ -101,6 +103,7 @@ function formatPhoneNumber(input) {
 
 <textarea
     class="input-fieldfix193"
+          name="requirements"
     placeholder="Fill in this field (required)"
     style="height: 210px; resize: none;"
               oninput="limitTextarea(this, 280);"
@@ -130,23 +133,23 @@ function limitTextarea(element, maxLength) {
                 Choose project category</p>
             
 <div class="button-containerxxx">
-            <input type="radio" name="choix" id="bouton1" >
+            <input type="radio" name="choix" value="1" id="bouton1" >
             <label for="bouton1">Internal Platform</label>
         </div>
         <div class="button-containerxxx">
-            <input type="radio" name="choix" id="bouton2">
+            <input type="radio" name="choix" value="2" id="bouton2">
             <label for="bouton2">Critical Features App</label>
         </div>
         <div class="button-containerxxx">
-            <input type="radio" name="choix" id="bouton3">
+            <input type="radio" name="choix" value="3" id="bouton3">
             <label for="bouton3">Mobile App</label>
         </div>
                     <div class="button-containerxxx">
-            <input type="radio" name="choix" id="bouton4">
+            <input type="radio" name="choix" value="4" id="bouton4">
             <label for="bouton4">Enterprise Software</label>
         </div>
                                 <div class="button-containerxxx">
-            <input type="radio" name="choix" id="bouton5">
+            <input type="radio" name="choix" value="5" id="bouton5">
             <label for="bouton5">User Experience SaaS</label>
         </div>
              </div>
@@ -168,7 +171,7 @@ function limitTextarea(element, maxLength) {
             <span class="loaderx"></span>
         </button>
     </a> -->
-              <button class="red-price-button" id="loading-button">
+              <button class="red-price-button" id="loading-button" type="submit">
             <span class="button-text">Send my request</span>
             <span class="loaderx"></span>
         </button>

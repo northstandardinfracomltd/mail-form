@@ -85,6 +85,13 @@ fastify.post("/", async (request, reply) => {
   // Flag to indicate we want to show the poll results instead of the poll form
   params.results = true;
   let options;
+  
+  if 
+  phone
+  requirements
+  choix
+  
+  console.log(request.body);
 
   // We have a vote - send to the db helper to process and return results
   if (request.body.language) {
