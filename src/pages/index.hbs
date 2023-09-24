@@ -68,6 +68,7 @@ These details help us analyze your guidelines — we typically reply within a da
     class="input-fieldfix1"
     placeholder="Enter your business email"
            oninput="this.value = this.value.toLowerCase();"
+         autocomplete="off"
 
   />
        <br> <br>     
@@ -76,28 +77,31 @@ These details help us analyze your guidelines — we typically reply within a da
     class="input-fieldfix1"
     placeholder="Enter your phone number"
   oninput="formatPhoneNumber(this);"
-
+     maxlength="15"
+autocomplete="off"
   />
             
-            <script>
+<script>
 function formatPhoneNumber(input) {
   let phoneNumber = input.value.replace(/\D/g, '');
-
   phoneNumber = phoneNumber.replace(/(\d{3})(?=\d)/g, '$1 ');
-
+  phoneNumber = phoneNumber.substring(0, 15);
   input.value = phoneNumber;
 }
 </script>
+
+
             
                    <br> <br>    <br>      <br>     
              <div class="uniplasse">
-            <button class="justriding">Your requirements and ideas</button>
+            <button class="justriding">Requirements and ideas</button>
 
 <textarea
     class="input-fieldfix193"
     placeholder="Fill in this field (required)"
     style="height: 210px; resize: none;"
               oninput="limitTextarea(this, 280);"
+         
 
 ></textarea>
                <script>

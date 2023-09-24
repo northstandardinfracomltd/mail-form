@@ -2700,14 +2700,14 @@ input[type="radio"]:checked + label {
   border: none;
   border-radius: 9px 9px 0px 0px;
   cursor: pointer;
-  font-size: 19px;
+  font-size: 22px;
   padding-left: 24px;
   padding-right: 24px;
   width: 100% !important;
-  padding-top: 20px;
-  padding-bottom: 14px;
+  padding-top: 27px;
+  padding-bottom: 19px;
   font-family: "saasduoPAR" !important;
-  height: 59px;
+  height: 72px;
   white-space: nowrap;
   cursor: default !important;
 }
