@@ -63,7 +63,7 @@ fastify.get("/", async (request, reply) => {
  *
  * Send raw json or the admin handlebars page
  */
-fastify.get("/requests", async (request, reply) => {
+fastify.get("/92822983839232938internal92822983839232938", async (request, reply) => {
   let params = request.query.raw ? {} : { seo: seo };
 
   // Get the log history from the db
