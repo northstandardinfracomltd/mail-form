@@ -71,8 +71,6 @@ fastify.get("/requests", async (request, reply) => {
 
   // Let the user know if there's an error
   params.errors = params.requests ? [] : data.errorMessage;
-  
-  console.log(params.requests);
 
   // Send the log list
   return request.query.raw
@@ -116,9 +114,8 @@ fastify.post("/", async (request, reply) => {
   }
   
   if (inputErrors.length == 0) {
-    let r = await db.saveRequest(request.body);
-    console.log(r);
-    params.errors = r ? [] : [data.errorMessage]
+    let resp = await db.saveRequest(requestData);
+    params.errors = resp ? [] : [data.errorMessage]
   } else {
     params.errors = inputErrors
   }
