@@ -67,13 +67,27 @@ These details help us analyze your guidelines — we typically reply within a da
     type="text"
     class="input-fieldfix1"
     placeholder="Enter your business email"
+           oninput="this.value = this.value.toLowerCase();"
+
   />
        <br> <br>     
               <input
     type="text"
     class="input-fieldfix1"
     placeholder="Enter your phone number"
+  oninput="formatPhoneNumber(this);"
+
   />
+            
+            <script>
+function formatPhoneNumber(input) {
+  let phoneNumber = input.value.replace(/\D/g, '');
+
+  phoneNumber = phoneNumber.replace(/(\d{3})(?=\d)/g, '$1 ');
+
+  input.value = phoneNumber;
+}
+</script>
             
                    <br> <br>    <br>      <br>     
              <div class="uniplasse">
