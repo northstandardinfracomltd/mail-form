@@ -76,4 +76,17 @@ module.exports = {
       return false;
     }
   },
+  
+  /**
+   * List of requests
+   */
+  getRequests: async data => {
+    // Insert new Log table entry indicating the user choice and timestamp
+    try {
+      return await db.all("SELECT email, phone, requirements, category, created_at FROM requests");
+    } catch (dbError) {
+      console.error(dbError);
+      return false;
+    }
+  },
 };

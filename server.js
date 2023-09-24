@@ -59,6 +59,28 @@ fastify.get("/", async (request, reply) => {
 });
 
 /**
+ * Admin endpoint returns list of requests
+ *
+ * Send raw json or the admin handlebars page
+ */
+fastify.get("/requests", async (request, reply) => {
+  let params = request.query.raw ? {} : { seo: seo };
+
+  // Get the log history from the db
+  params.requests = await db.getRequests();
+
+  // Let the user know if there's an error
+  params.errors = params.requests ? [] : data.errorMessage;
+  
+  console.log(params.requests);
+
+  // Send the log list
+  return request.query.raw
+    ? reply.send(params)
+    : reply.view("/src/pages/admin.hbs", params);
+});
+
+/**
  * Post route to process user vote
  *
  * Retrieve vote from body data

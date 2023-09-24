@@ -60,9 +60,13 @@ These details help us analyze your guidelines — we typically reply within a da
       
       <br>
           
-          {{#each errors}}
+          {{#if errors}}
+      <div class="error">
+        {{#each errors}}
           <p>{{this}}</p>
-          {{/each}}
+        {{/each}}
+      </div>
+          {{/if}}
           
           <form method="post" action="/">
           <div class="form-containercontact">

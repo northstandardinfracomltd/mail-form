@@ -21,27 +21,35 @@
     <div class="content" role="main">
 
       <h1>Logs</h1>
-      {{#if error}}
-      <p class="error">
-        {{error}}
-      </p>
+      {{#if errors}}
+      <div class="error">
+        {{#each errors}}
+          <p>{{this}}</p>
+        {{/each}}
+      </div>
       {{else}}
 
       <p>
         Each time you submit an option through the poll in the <a href="/">Home</a> page, the app will add it to the log. <em>Most recent records will be shown (max 20).</em>
       </p>
-      {{#if optionHistory.length}}
+      {{#if requests.length}}
           <div>
-            <h2>Poll History</h2>
+            <h2>Requests</h2>
             <table>
               <tr>
-                <th>Option Name</th>
-                <th>Timestamp</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Requirements / Ideas</th>
+                <th>Category</th>
+                <th>Created At</th>
               </tr>
-              {{#each optionHistory}}
+              {{#each requests}}
                 <tr>
-                  <td>{{choice}}</td>
-                  <td>{{time}}</td>
+                  <td>{{email}}</td>
+                  <td>{{phone}}</td>
+                  <td>{{requirements}}</td>
+                  <td>{{category}}</td>
+                  <td>{{created_at}}</td>
                 </tr>
               {{/each}}
             </table>
